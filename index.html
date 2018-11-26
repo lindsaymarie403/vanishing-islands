@@ -15,9 +15,37 @@
 
   <body>
 
-    <div id="title">The Lost Islands</div>
+    <div id="title1">150 years ago, Long Marsh Island, off the coast of Queen Anne's County, Maryland, boasted X acres of land.</div>
+    <div id="title2">A century later, its land had shrunk X percent.</div>
+    <div id="title3">By 1992, it was gone.</div>
 
-    <img src="nelson.gif">
+    <img id="head" src="assets/longmarsh1.png">
+
+    <div id="container"></div>
+
+    <script>
+      var onScrollHandler = function() {
+        var newImageUrl = head.src;
+        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        if (scrollTop > 0) {
+           newImageUrl = "assets/longmarsh1.png"
+           //head.style.position = "fixed"
+        }
+        if (scrollTop > 600) {
+           newImageUrl = "assets/longmarsh2.png"
+           //head.style.position = "fixed"
+        }
+        if (scrollTop > 1600) {
+           newImageUrl = "assets/longmarsh3.png"
+           //head.style.position = "fixed"
+        }
+        if (scrollTop > 2600) {
+           //head.style.position = "relative"
+        }
+        head.src = newImageUrl;
+      };
+      document.addEventListener ("scroll", onScrollHandler);
+    </script>
 
   </body>
 
