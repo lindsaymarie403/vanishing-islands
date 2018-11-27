@@ -2,7 +2,7 @@ body {
   margin: 0;
 }
 
-#title1, #title2, #title3, #title4 {
+#title1, #title2, #title3, #title4, #title5 {
   position: absolute;
   background-color: white;
   padding: 25px;
@@ -12,6 +12,7 @@ body {
   z-index: 1;
   opacity: 0.75;
   font-family: Arial;
+  box-shadow: 0px 0px 10px #888888;
 }
 
 #title1 {
@@ -30,6 +31,10 @@ body {
   top: 3300px;
 }
 
+#title5 {
+  top: 4300px;
+}
+
 #head {
   width: 100%;
   position: fixed;
@@ -42,5 +47,17 @@ body {
   height: 5000px;
   background-color: white;
   width: 100%;
-  padding-top: 50px;
+  padding-top: 75px;
+}
+
+#title6 {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  width: 60%;
+  margin-left: 20%;
+  text-align: center;
+  font-family: Arial;
+  font-size: 20px;
+  border-top: 1px solid #33cccc;
+  border-bottom: 1px solid #33cccc;
 }
