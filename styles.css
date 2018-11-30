@@ -69,6 +69,23 @@ body {
   border-bottom: 1px solid #33cccc;
 }
 
+#map-box {
+  position: relative;
+}
+
+#map {
+  width: 100%;
+}
+
+.map-gif {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  z-index: 1;
+  left: 300px;
+  top: 320px;
+}
+
 .graphic {
   width: 80%;
   margin: 50px auto 50px auto;
