@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+}
+
+#header {
+  background-color: #383838;
+  font-family: Arial;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  letter-spacing: .75em;
+  font-weight: bold;
+  color: white;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+#title1, #title2, #title3, #title4, #title5 {
+  position: absolute;
+  background-color: white;
+  padding: 25px;
+  width: 60%;
+  margin-left: 20%;
+  text-align: center;
+  z-index: 1;
+  opacity: 0.75;
+  font-family: Arial;
+  box-shadow: 0px 0px 10px #888888;
+}
+
+#title1 {
+  top: 300px;
+}
+
+#title2 {
+  top: 1300px;
+}
+
+#head {
+  width: 100%;
+  position: fixed;
+}
+
+#container {
+  position: absolute;
+  z-index: 1;
+  top: 2000px;
+  height: 5000px;
+  background-color: white;
+  width: 100%;
+  padding-top: 75px;
+}
+
+.body-copy {
+  width: 60%;
+  margin: 50px auto 50px auto;
+  max-width: 550px;
+  font-family: Georgia;
+  font-size: 19px;
+  line-height: 1.4em;
+}
+
+#title6 {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-bottom: 50px;
+  text-align: center;
+  font-family: Arial;
+  font-size: 20px;
+  border-bottom: 1px solid #33cccc;
+}
+
+#map-box {
+  position: relative;
+}
+
+#map {
+  width: 100%;
+}
