@@ -1,53 +1,61 @@
 body {
   margin: 0;
+  background-color: #474747;
 }
 
 #header {
-  background-color: #383838;
+  background-color: #333333;
   font-family: Arial;
   font-size: 12px;
   text-transform: uppercase;
   text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
-  letter-spacing: .75em;
+  letter-spacing: .6em;
   font-weight: bold;
   color: white;
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   width: 100%;
 }
 
-#title1, #title2, #title3, #title4, #title5 {
-  position: absolute;
-  background-color: white;
-  padding: 25px;
+.title {
+  position: fixed;
   width: 60%;
   margin-left: 20%;
   text-align: center;
   z-index: 1;
-  opacity: 0.75;
-  font-family: Arial;
-  box-shadow: 0px 0px 10px #888888;
-}
-
-#title1 {
+  font-family: Georgia;
+  color: white;
+  font-size: 26px;
   top: 300px;
 }
 
-#title2 {
-  top: 1300px;
+.final-title {
+  position: fixed;
+  width: 40%;
+  margin-left: 30%;
+  text-align: center;
+  z-index: 3;
+  font-family: Georgia;
+  color: white;
+  font-size: 44px;
+  display: inline;
+  top: 260px;
 }
 
 #head {
-  width: 100%;
+  width: 80%;
   position: fixed;
+  margin: 100px 10% 50px 10%;
+  display: none;
+  z-index: 2;
 }
 
 #container {
   position: absolute;
-  z-index: 1;
-  top: 2000px;
+  z-index: 5;
+  top: 2200px;
   height: 5000px;
   background-color: white;
   width: 100%;
@@ -61,16 +69,6 @@ body {
   font-family: Georgia;
   font-size: 19px;
   line-height: 1.4em;
-}
-
-#title6 {
-  padding-top: 25px;
-  padding-bottom: 25px;
-  margin-bottom: 50px;
-  text-align: center;
-  font-family: Arial;
-  font-size: 20px;
-  border-bottom: 1px solid #33cccc;
 }
 
 #map-box {

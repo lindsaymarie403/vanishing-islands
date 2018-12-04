@@ -10,20 +10,22 @@
     <title>The Lost Islands</title>
 
     <link href="styles2.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
   </head>
 
   <body>
-    <div id="header">Lost Islands</div>
+    <div id="header">The Lost Islands</div>
 
-    <div id="title1">Dig up the 1848 Maryland land survey, and you’ll find Sharps Island. It’s a 438-acre isle in the Chesapeake Bay perched off the coasts of Talbot and Dorchester counties.</div>
-    <div id="title2">By 1910, that same island measured just 53 acres. Now, it’s gone.</div>
+    <div class="title">Dig up the 1848 Maryland land survey, and you’ll find Sharps Island.</div>
+    <!--
+    <div id="title3">By 1910, that same island measured just 53 acres.</div>
+    <div id="title4">Now, it’s gone.</div>-->
 
     <img id="head" src="assets/survey.jpg">
 
     <div id="container">
       <div class="body-copy">
-        <p id="title6">These are the lost islands of the Chesapeake.</p>
         <p class="copy">We’re losing land in the Chesapeake Bay. Sea levels in the Chesapeake have risen a foot in the last century, more than twice the past global average. In Maryland and Virginia, that water isn’t just encroaching on coastline; it’s swallowing islands whole.</p>
         <p class="copy">The natural erosion that the area experiences began accelerating in the 1850s &mdash; the same time the Industrial Revolution massively increased our output of carbon dioxide and other greenhouse gases, said Kristin Reilly, communications director for the National Wildlife Federation.</p>
         <p class="copy">Since then, upward of 500 islands have sunk beneath the waters of the bay. Some are only specks on old maps or lines in early documents dating to the English settlers, and with holes in the historical record, it’s hard to know just how many we’ve lost, Reilly said. Most islands have never housed people, but they have served an essential role in the bay’s ecosystem, where they provide habitats for waterfowl and birds, for example.</p>
@@ -38,20 +40,54 @@
     </div>
 
     <script>
+
+    $(document).ready(function () {
+
+        $(window).scroll(function () {
+            if ($(this).scrollTop() < 100) {
+                $('#head').css('display','none');
+                $('.title').html('Dig up the 1848 Maryland land survey, and you’ll find Sharps Island.').css('display','inline');
+            } else if ($(this).scrollTop() < 300) {
+                $('#head').css('display','inline').attr('src', 'assets/survey.jpg');
+                $('.title').css('display','none');
+            } else if ($(this).scrollTop() < 500) {
+                $('#head').attr('src', 'assets/survey_dark.jpg').css('display','inline');
+                $('.title').html('The 438-acre isle is perched off the coasts of Talbot and Dorchester counties in the Chesapeake Bay.').css('z-index','3').css('display','inline');
+            } else if ($(this).scrollTop() < 800) {
+                $('#head').css('display','none');
+                $('.title').html('By 1910, that same island measured just 53 acres.').css('z-index','3').css('display','inline');
+            } else if ($(this).scrollTop() < 1000) {
+                $('#head').css('display','none');
+                $('.title').html('By 1910, that same island measured just 53 acres. <br/> <br/> Today, it\'s gone.').css('display','inline');
+            } else if ($(this).scrollTop() < 1300) {
+                $('#head').attr('src', 'assets/satellite.png').css('display','inline');
+                $('.title').css('display','none').removeClass("final-title");
+            } else {
+                $('#head').attr('src', 'assets/satellite_dark.png').css('display','inline');
+                $('.title').html('These are the Chesapeake\'s lost islands.').css('display','inline').addClass("final-title");
+            }
+        });
+    });
+
+    /*
       var onScrollHandler = function() {
         var newImageUrl = head.src;
+        var newText = title1.html;
         var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
         if (scrollTop > 0) {
-           newImageUrl = "assets/survey.jpg"
+            //newText = "It’s a 438-acre isle in the Chesapeake Bay perched off the coasts of Talbot and Dorchester counties."
+           //newImageUrl = "assets/survey.jpg"
            //head.style.position = "fixed"
         }
-        if (scrollTop > 600) {
+        if (scrollTop > 200) {
+            newText = "It’s a 438-acre isle in the Chesapeake Bay perched off the coasts of Talbot and Dorchester counties."
            newImageUrl = "assets/satellite.png"
            //head.style.position = "fixed"
         }
         head.src = newImageUrl;
       };
       document.addEventListener ("scroll", onScrollHandler);
+      */
     </script>
 
   </body>
