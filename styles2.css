@@ -15,7 +15,7 @@ body {
   font-weight: bold;
   color: white;
   position: fixed;
-  z-index: 3;
+  z-index: 5;
   width: 100%;
 }
 
@@ -41,7 +41,7 @@ body {
   color: white;
   font-size: 44px;
   display: inline;
-  top: 260px;
+  top: 320px;
 }
 
 #head {
@@ -54,7 +54,7 @@ body {
 
 #container {
   position: absolute;
-  z-index: 5;
+  z-index: 4;
   top: 2200px;
   height: 5000px;
   background-color: white;
@@ -66,9 +66,22 @@ body {
   width: 60%;
   margin: 50px auto 50px auto;
   max-width: 550px;
+}
+
+.copy {
   font-family: Georgia;
   font-size: 19px;
   line-height: 1.4em;
+}
+
+.section {
+  padding-top: 25px;
+  font-family: Arial;
+  font-size: 17px;
+  letter-spacing: .1em;
+  font-weight: bold;
+  color: #6eb9ce;
+  text-transform: uppercase;
 }
 
 #map-box {
