@@ -341,11 +341,14 @@
 
         <div id="g-maryland_big-box" class="ai2html ai2html-box-v5">
 
+          <p class="graphic-title">Ten islands we've lost</p>
+          <p class="graphic-sub">A sample of the hundreds of islands that have sunk into the Chesapeake Bay</p>
+
         	<!-- Artboard: artboard-1000 -->
         	<div id="g-maryland_big-artboard-1000" class="g-artboard" style="width:1000px; height:2841.88606096689px;" data-aspect-ratio="0.352" data-min-width="1000">
 
         		<img class="gif" id="sprys" src="assets/sprys.gif">
-        		<img class="gif" id="littleneck" src="assets/littleneck.gif">
+          	<img class="gif" id="littleneck" src="assets/littleneck.gif">
         		<img class="gif" id="thomas" src="assets/thomas.gif">
         		<img class="gif" id="longmarsh" src="assets/longmarsh.gif">
         		<img class="gif" id="nelson" src="assets/nelson.gif">
@@ -567,25 +570,74 @@
         });
     });
 
-    /*
-      var onScrollHandler = function() {
-        var newImageUrl = head.src;
-        var newText = title1.html;
-        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-        if (scrollTop > 0) {
-            //newText = "It’s a 438-acre isle in the Chesapeake Bay perched off the coasts of Talbot and Dorchester counties."
-           //newImageUrl = "assets/survey.jpg"
-           //head.style.position = "fixed"
-        }
-        if (scrollTop > 200) {
-            newText = "It’s a 438-acre isle in the Chesapeake Bay perched off the coasts of Talbot and Dorchester counties."
-           newImageUrl = "assets/satellite.png"
-           //head.style.position = "fixed"
-        }
-        head.src = newImageUrl;
-      };
-      document.addEventListener ("scroll", onScrollHandler);
-      */
+    $.fn.isFullyInViewport = function() {
+      var elementTop = $(this).offset().top;
+      var elementBottom = elementTop + $(this).outerHeight();
+
+      var viewportTop = $(window).scrollTop();
+      var viewportBottom = viewportTop + $(window).height();
+
+      return elementTop >= viewportTop && elementBottom <= viewportBottom;
+    };
+
+    $(window).on('resize scroll', function() {
+      if ($('#sprys').isFullyInViewport()) {
+        $('#sprys').delay(500).fadeTo("slow", 1);
+      } else {}
+    });
+
+    $(window).on('resize scroll', function() {
+      if ($('#littleneck').isFullyInViewport()) {
+        $('#littleneck').delay(500).fadeTo("slow", 1);
+      } else {}
+    });
+
+    $(window).on('resize scroll', function() {
+      if ($('#thomas').isFullyInViewport()) {
+        $('#thomas').delay(500).fadeTo("slow", 1);
+      } else {}
+    });
+    $(window).on('resize scroll', function() {
+      if ($('#longmarsh').isFullyInViewport()) {
+        $('#longmarsh').delay(500).fadeTo("slow", 1);
+      } else {}
+    });
+
+    $(window).on('resize scroll', function() {
+      if ($('#nelson').isFullyInViewport()) {
+        $('#nelson').delay(500).fadeTo("slow", 1);
+      } else {}
+    });
+
+    $(window).on('resize scroll', function() {
+      if ($('#roystons').isFullyInViewport()) {
+        $('#roystons').delay(500).fadeTo("slow", 1);
+      } else {}
+    });
+
+    $(window).on('resize scroll', function() {
+      if ($('#sharps').isFullyInViewport()) {
+        $('#sharps').delay(500).fadeTo("slow", 1);
+      } else {}
+    });
+    $(window).on('resize scroll', function() {
+      if ($('#greatcove').isFullyInViewport()) {
+        $('#greatcove').delay(500).fadeTo("slow", 1);
+      } else {}
+    });
+
+    $(window).on('resize scroll', function() {
+      if ($('#fish').isFullyInViewport()) {
+        $('#fish').delay(500).fadeTo("slow", 1);
+      } else {}
+    });
+
+    $(window).on('resize scroll', function() {
+      if ($('#piney').isFullyInViewport()) {
+        $('#piney').delay(500).fadeTo("slow", 1);
+      } else {}
+    });
+
     </script>
 
   </body>

@@ -84,6 +84,34 @@ body {
   text-transform: uppercase;
 }
 
+.graphic-title {
+  font-family: Arial;
+  font-size: 22px;
+  width: 1000px;
+  margin: 10px auto 0px auto;
+  color: #6d6e71;
+  font-weight: bold;
+}
+
+.graphic-sub {
+  font-family: Arial;
+  font-size: 16px;
+  width: 1000px;
+  margin: 5px auto 30px auto;
+  color: #6d6e71;
+}
+
+#sprys, #littleneck, #thomas, #longmarsh, #nelson, #roystons, #sharps, #greatcove, #fish, #piney {
+  opacity: 0;
+}
+
+#sprys-circle {
+  position: absolute;
+  top: 530px;
+  left: 308px;
+  z-index: 1;
+}
+
 #map-box {
   position: relative;
 }
