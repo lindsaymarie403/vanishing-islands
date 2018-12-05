@@ -112,10 +112,11 @@ body {
   z-index: 1;
 }
 
-#map-box {
-  position: relative;
+.islands {
+  width: 1000px;
+  margin: 10px auto 10px auto;
 }
 
-#map {
+.islands img {
   width: 100%;
 }
