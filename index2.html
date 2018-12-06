@@ -534,8 +534,11 @@
       </div>
 
       <div class="islands">
-        <img src="assets/tilghman1.png">
+        <img id="tilghman" src="assets/tilghman1.png">
       </div>
+      <div class="annotations" id="first-ann">This is how some islands currently look</div>
+      <div class="annotations" id="second-ann">By 2050, experts expect a 2-foot sea-level rise...</div>
+      <div class="annotations" id="third-ann">...and a 4-foot rise by 2100.</div>
 
     </div>
 
@@ -637,24 +640,47 @@
       } else {}
     });
 
-/*
-    $.fn.bottomInViewport = function() {
+    //scroll for sea level rise projections
+    $.fn.readyForNext = function() {
       var elementTop = $(this).offset().top;
       var elementBottom = elementTop + $(this).outerHeight();
 
       var viewportTop = $(window).scrollTop();
       var viewportBottom = viewportTop + $(window).height();
 
-      return elementTop >= viewportTop && elementBottom <= viewportBottom;
+      return elementBottom + 50 <= viewportBottom;
+    };
+
+    $.fn.isDone = function() {
+      var elementTop = $(this).offset().top;
+      var elementBottom = elementTop + $(this).outerHeight();
+
+      var viewportTop = $(window).scrollTop();
+      //var viewportBottom = viewportTop + $(window).height();
+
+      return elementBottom <= viewportTop;
     };
 
     $(window).on('resize scroll', function() {
-      var elementTop = $(this).offset().top;
-      if ($('.islands').bottomInViewport()) {
-        $('.islands').css('position', 'fixed').css('top', '4000px')
-      } else {}
+      if ($('.islands').isFullyInViewport()) {
+        $('.islands').addClass('islands-sticky');
+      } else if ($('#third-ann').isDone()){
+        $('.islands').removeClass('islands-sticky');
+      }
     });
-*/
+
+    $(window).on('resize scroll', function() {
+      if ($('#third-ann').readyForNext()) {
+        $('#tilghman').attr('src', 'assets/tilghman3.png')
+      } else if ($('#second-ann').readyForNext()) {
+        $('#tilghman').attr('src', 'assets/tilghman2.png')
+      } else {
+        $('#tilghman').attr('src', 'assets/tilghman1.png')
+      }
+    });
+
+
+
     </script>
 
   </body>
