@@ -535,8 +535,13 @@
 
       <div id="graphic">
         <div class="sticky">
-          <p class="graphic-title">Tilghman Island</p>
-          <!--<p class="graphic-sub">A sample of the hundreds of islands that have sunk into the Chesapeake Bay</p>-->
+          <p class="graphic-title">As seas rise, more islands will sink</p>
+          <p class="graphic-sub">Rising seas will encroach on shorelines and swallow islands</p>
+          <div class="island-names">
+            <div class="name">Tilghman Island</div>
+            <div class="name">Bloodsworth Island</div>
+            <div class="name">Smith Island</div>
+          </div>
           <div class="islands"><img id="tilghman" src="assets/tilghman1.png"></div>
         </div>
         <div class="annotations" id="first-ann">This is how some islands currently look</div>
@@ -668,11 +673,11 @@
 
     $(window).on('resize scroll', function() {
       if ($('#third-ann').readyForNext()) {
-        $('#tilghman').attr('src', 'assets/tilghman3.png')
+        $('#tilghman').attr('src', 'assets/tilghman03.png')
       } else if ($('#second-ann').readyForNext()) {
-        $('#tilghman').attr('src', 'assets/tilghman2.png')
+        $('#tilghman').attr('src', 'assets/tilghman02.png')
       } else {
-        $('#tilghman').attr('src', 'assets/tilghman1.png')
+        $('#tilghman').attr('src', 'assets/tilghman01.png')
       }
     });
 
