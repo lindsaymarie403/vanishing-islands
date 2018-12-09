@@ -320,12 +320,108 @@
   <body>
     <div id="header">The Lost Islands</div>
 
-    <div class="title">Dig up the 1848 Maryland land survey, and you’ll find Sharps Island.</div>
+    <div id="intro">
+      <div class="intro-sticky">
+        <div class="sharps-name">Sharps Island</div>
+        <div><img id="head" src="assets/survey.jpg"></div>
+        <div id="lost-islands">
+          <div class="lost-names">Sharps Island</div>
+          <div class="lost-names">Alder Island</div>
+          <div class="lost-names">Alderen Island</div>
+          <div class="lost-names">Angle Island</div>
+          <div class="lost-names">Augustine Condon’s Island</div>
+          <div class="lost-names">Back Creek Island</div>
+          <div class="lost-names">Bar Island</div>
+          <div class="lost-names">Barnes Island</div>
+          <div class="lost-names">Bass Island</div>
+          <div class="lost-names">Bear Island</div>
+          <div class="lost-names">Bear Island</div>
+          <div class="lost-names">Beautiful Island</div>
+          <div class="lost-names">Beaver Island</div>
+          <div class="lost-names">Bee Island</div>
+          <div class="lost-names">Beech Island</div>
+          <div class="lost-names">Benjamin Island</div>
+          <div class="lost-names">Benets Park Island</div>
+          <div class="lost-names">Bennetts Island</div>
+          <div class="lost-names">Bentleys Island</div>
+          <div class="lost-names">Big Oyster Island</div>
+          <div class="lost-names">Birch Island</div>
+          <div class="lost-names">Black Island</div>
+          <div class="lost-names">Black Duck Island</div>
+          <div class="lost-names">Black Duck Island</div>
+          <div class="lost-names">Blackhead Island</div>
+          <div class="lost-names">Blackheads Island</div>
+          <div class="lost-names">Blackwalnut Island</div>
+          <div class="lost-names">Bluff Island</div>
+          <div class="lost-names">Bodkin Island</div>
+          <div class="lost-names">Bonaparte Island</div>
+          <div class="lost-names">Bonby Island</div>
+          <div class="lost-names">Brant Island</div>
+          <div class="lost-names">Brarary Island</div>
+          <div class="lost-names">Bread Street Island</div>
+          <div class="lost-names">Brewers Island</div>
+          <div class="lost-names">Bridge Island</div>
+          <div class="lost-names">Brights Island</div>
+          <div class="lost-names">Brislan Island</div>
+          <!---->
+          <div class="lost-names">Broken Island</div>
+          <div class="lost-names">Brown's Island</div>
+          <div class="lost-names">Buck Island</div>
+          <div class="lost-names">Bullies Island</div>
+          <div class="lost-names">Burk Island</div>
+          <div class="lost-names">Burntwood Island</div>
+          <div class="lost-names">Burroes Island</div>
+          <div class="lost-names">Busters Island</div>
+          <div class="lost-names">Butchers Island</div>
+          <div class="lost-names">Butterfly Island</div>
+          <div class="lost-names">Buttonwood Island</div>
+          <div class="lost-names">Buzzard Island</div>
+          <div class="lost-names">Buzzards Island</div>
+          <div class="lost-names">Cagers Island</div>
+          <div class="lost-names">Calf Island</div>
+          <div class="lost-names">Campbells Island</div>
+          <div class="lost-names">Canady Island</div>
+          <div class="lost-names">Canary Island</div>
+          <div class="lost-names">Canvasback Island</div>
+          <div class="lost-names">Carpenters Island</div>
+          <div class="lost-names">Catfish Island</div>
+          <div class="lost-names">Cedar Island</div>
+          <div class="lost-names">Chances Island</div>
+          <div class="lost-names">Channel Island</div>
+          <div class="lost-names">Cherry Island</div>
+          <div class="lost-names">Chinch Island</div>
+          <div class="lost-names">Chinkapin Island</div>
+          <div class="lost-names">Clover Island</div>
+          <div class="lost-names">Clows Island</div>
+          <div class="lost-names">Coartneys Island</div>
+          <div class="lost-names">Cobhams Island</div>
+          <div class="lost-names">Cockeys Island</div>
+          <div class="lost-names">Conjurers Island</div>
+          <div class="lost-names">Cooks Island</div>
+          <div class="lost-names">Copper Island</div>
+          <div class="lost-names">Corsica Island</div>
+          <div class="lost-names">Cortneys Island</div>
+          <div class="lost-names">Costens Island</div>
+
+        </div>
+      </div>
+      <div class="annotations" id="first-intro">The 1848 Maryland survey shows an island called Sharps, a 438-acre isle perched in the Chesapeake Bay.</div>
+      <div class="annotations" id="second-intro">By 1910, that same island measured just 53 acres. <br/> Today, it’s gone.</div>
+      <div class="annotations" id="third-intro">Experts estimate hundreds like Sharps have eroded since the English explored the Chesapeake Bay in the 1600s.</div>
+
+      <div id="dummy"></div>
+
+    </div>
+
+    <div class="annotations" id="fourth-intro">And with climate change causing sea levels to rise faster than ever, more islands are in danger of vanishing.</div>
+
     <!--
+    <div class="title">The 1848 Maryland land survey shows an island called Sharps.</div>
     <div id="title3">By 1910, that same island measured just 53 acres.</div>
-    <div id="title4">Now, it’s gone.</div>-->
+    <div id="title4">Now, it’s gone.</div>
 
     <img id="head" src="assets/survey.jpg">
+  -->
 
     <div id="container">
       <div class="body-copy">
@@ -542,7 +638,7 @@
             <div class="name">Bloodsworth Island</div>
             <div class="name">Smith Island</div>
           </div>
-          <div class="islands"><img id="tilghman" src="assets/tilghman1.png"></div>
+          <div class="islands"><img id="tilghman" src="assets/tilghman01.png"></div>
         </div>
         <div class="annotations" id="first-ann">This is how some islands currently look</div>
         <div class="annotations" id="second-ann">By 2050, experts expect a 2-foot sea-level rise...</div>
@@ -554,12 +650,13 @@
 
     <script>
 
+/*old intro
     $(document).ready(function () {
 
         $(window).scroll(function () {
             if ($(this).scrollTop() < 100) {
                 $('#head').css('display','none');
-                $('.title').html('Dig up the 1848 Maryland land survey, and you’ll find Sharps Island.').css('display','inline');
+                $('.title').html('The 1848 Maryland land survey shows an island called Sharps.').css('display','inline');
             } else if ($(this).scrollTop() < 300) {
                 $('#head').css('display','inline').attr('src', 'assets/survey.jpg');
                 $('.title').css('display','none');
@@ -581,6 +678,7 @@
             }
         });
     });
+*/
 
     $.fn.isFullyInViewport = function() {
       var elementTop = $(this).offset().top;
@@ -681,6 +779,18 @@
       }
     });
 
+    //redesigned scroll for intro
+    $(window).on('resize scroll', function() {
+        if ($('#third-intro').readyForNext()) {
+        $('#head').css('display', 'none')
+        $('#lost-islands').css('display', 'inline')
+      } else if ($('#second-intro').readyForNext()) {
+      $('#head').css('display', 'inline').attr('src', 'assets/satellite.png')
+      $('#lost-islands').css('display', 'none')
+    } else {
+        $('#head').attr('src', 'assets/survey.jpg')
+      }
+    });
 
 
     </script>

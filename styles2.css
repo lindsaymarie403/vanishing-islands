@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  padding: 0;
   background-color: #474747;
 }
 
@@ -17,6 +18,7 @@ body {
   position: fixed;
   z-index: 5;
   width: 100%;
+  top: 0px;
 }
 
 .title {
@@ -44,18 +46,76 @@ body {
   top: 320px;
 }
 
-#head {
-  width: 80%;
-  position: fixed;
-  margin: 100px 10% 50px 10%;
-  display: none;
-  z-index: 2;
+#intro {
+  width: 1000px;
+  margin: 75px auto 10px auto;
+  position: relative;
 }
+
+.intro-sticky {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 75px;
+  z-index: -1;
+}
+
+#head {
+  width: 100%;
+}
+
+#first-intro {
+  margin: -350px 25% 0px 25%;
+}
+
+#second-intro {
+  margin: 800px 25% 0px 25%;
+}
+
+#third-intro {
+  margin: 800px 25% 0px 25%;
+}
+
+#fourth-intro {
+  margin: 400px 25% 0px 25%;
+}
+
+#lost-islands {
+  width: 1000px;
+  margin: 75px auto 50px auto;
+  display: none;
+}
+
+.lost-names {
+  float: left;
+  font-family: Arial;
+  background-color: #75797e;
+  color: white;
+  font-size: 12px;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.sharps-name {
+  font-family: Arial;
+  background-color: #75797e;
+  color: white;
+  font-size: 12px;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  position: absolute;
+  z-index: 1;
+  left: 0px;
+}
+
 
 #container {
   position: absolute;
   z-index: 4;
-  top: 2200px;
+  top: 3300px;
   height: 10000px;
   background-color: white;
   width: 100%;
@@ -153,10 +213,11 @@ body {
 
 .annotations {
   width: 50%;
-  padding: 10px;
+  padding: 20px;
   background-color: white;
   text-align: center;
   font-family: Arial;
+  font-size: 18px;
   opacity: .8;
   box-shadow: 0px 0px 10px #888888;
 }
