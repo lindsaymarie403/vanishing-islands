@@ -21,31 +21,6 @@ body {
   top: 0px;
 }
 
-.title {
-  position: fixed;
-  width: 60%;
-  margin-left: 20%;
-  text-align: center;
-  z-index: 1;
-  font-family: Georgia;
-  color: white;
-  font-size: 26px;
-  top: 300px;
-}
-
-.final-title {
-  position: fixed;
-  width: 40%;
-  margin-left: 30%;
-  text-align: center;
-  z-index: 3;
-  font-family: Georgia;
-  color: white;
-  font-size: 44px;
-  display: inline;
-  top: 320px;
-}
-
 #intro {
   width: 1000px;
   margin: 75px auto 10px auto;
@@ -64,7 +39,7 @@ body {
 }
 
 #first-intro {
-  margin: -350px 25% 0px 25%;
+  margin: -200px 25% 0px 25%;
 }
 
 #second-intro {
@@ -82,7 +57,7 @@ body {
 #lost-islands {
   width: 1000px;
   margin: 75px auto 50px auto;
-  display: none;
+  opacity: 0;
 }
 
 .lost-names {
@@ -97,10 +72,22 @@ body {
   text-transform: uppercase;
 }
 
+.first {
+  background-color: #6eb9ce;
+}
+
+.second {
+  background-color: #898b8e;
+}
+
+.third {
+  background-color: #b5b3ab;
+}
+
 .sharps-name {
   font-family: Arial;
-  background-color: #75797e;
   color: white;
+  background-color: #6eb9ce;
   font-size: 12px;
   padding: 10px;
   margin: 5px;
@@ -111,21 +98,29 @@ body {
   left: 0px;
 }
 
-
 #container {
   position: absolute;
   z-index: 4;
-  top: 3300px;
+  top: 3500px;
   height: 10000px;
   background-color: white;
   width: 100%;
-  padding-top: 75px;
+  padding-top: 50px;
+  box-shadow: 0px 0px 300px #232323;
 }
 
 .body-copy {
   width: 60%;
   margin: 50px auto 50px auto;
   max-width: 550px;
+}
+
+#sub {
+  font-family: Arial;
+  font-size: 26px;
+  margin: 10px auto 30px auto;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #d3d3d3;
 }
 
 .copy {
