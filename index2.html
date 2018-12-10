@@ -473,6 +473,9 @@
 
       <div id="g-maryland_big-box" class="ai2html ai2html-box-v5">
 
+        <p class="graphic-title">Ten Maryland islands we've lost</p>
+        <p class="graphic-sub">A sample of the hundreds of islands that have sunk into the Chesapeake Bay</p>
+
         <!-- Artboard: artboard-1000 -->
         <div id="g-maryland_big-artboard-1000" class="g-artboard" style="width:1000px; height:2841.8860609669px;" data-aspect-ratio="0.352" data-min-width="1000">
 
@@ -647,13 +650,17 @@
           <p class="graphic-title">As seas rise, more islands will sink</p>
           <p class="graphic-sub">Rising seas will encroach on shorelines and swallow islands</p>
           <div class="island-names">
-            <div class="name">Tilghman Island</div>
-            <div class="name">Bloodsworth Island</div>
-            <div class="name">Smith Island</div>
+            <div class="name"><p class="name-text">Current sea level</p></div>
+            <div class="name hooper-name"><p class="name-text">Current sea level</p></div>
+            <div class="name"><p class="name-text">Current sea level</p></div>
           </div>
-          <div class="islands"><img id="tilghman" src="assets/tilghman01.png"></div>
+          <div class="islands">
+            <img id="littledeal" src="assets/littledeal1.png">
+            <img id="hooper" src="assets/hooper1.png">
+            <img id="hazard" src="assets/hazard1.png">
+          </div>
         </div>
-        <div class="annotations" id="first-ann">This is how some islands currently look</div>
+        <div class="annotations" id="first-ann">Some islands are holding their ground &mdash; for now.</div>
         <div class="annotations" id="second-ann">By 2050, experts expect a 2-foot sea-level rise...</div>
         <div class="annotations" id="third-ann">...and a 4-foot rise by 2100.</div>
         <div id="dummy"></div>
@@ -754,11 +761,20 @@
 
     $(window).on('resize scroll', function() {
       if ($('#third-ann').readyForNext()) {
-        $('#tilghman').attr('src', 'assets/tilghman03.png')
+        $('#hooper').attr('src', 'assets/hooper3.png')
+        $('#littledeal').attr('src', 'assets/littledeal3.png')
+        $('#hazard').attr('src', 'assets/hazard3.png')
+        $('.name-text').text('4-foot rise, about 2100')
       } else if ($('#second-ann').readyForNext()) {
-        $('#tilghman').attr('src', 'assets/tilghman02.png')
+        $('#hooper').attr('src', 'assets/hooper2.png')
+        $('#littledeal').attr('src', 'assets/littledeal2.png')
+        $('#hazard').attr('src', 'assets/hazard2.png')
+        $('.name-text').text('2-foot rise, about 2050')
       } else {
-        $('#tilghman').attr('src', 'assets/tilghman01.png')
+        $('#hooper').attr('src', 'assets/hooper1.png')
+        $('#littledeal').attr('src', 'assets/littledeal1.png')
+        $('#hazard').attr('src', 'assets/hazard1.png')
+        $('.name-text').text('Current sea level')
       }
     });
 

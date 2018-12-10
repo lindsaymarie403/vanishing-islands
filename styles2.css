@@ -175,29 +175,39 @@ body {
 
 .island-names {
   width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  font-family: Arial;
-  font-size: 14px;
+  margin: -20px auto 0px auto;
   color: #6d6e71;
-  text-transform: uppercase;
   padding-bottom: 20px;
 }
 
 .name {
+  width: 303px;
   float: left;
-  width: 33%;
+}
+
+.name-text {
+  float: left;
+  font-family: Arial;
+  background-color: #ebe9db;
+  padding: 5px;
+  font-size: 14px;
+  border-radius: 3px;
 }
 
 .islands {
   width: 1000px;
-  margin: 10px auto 10px auto;
+  margin: 15px auto 10px auto;
   position: relative;
 }
 
 .islands img {
   width: 300px;
   top: 100px;
+}
+
+#hooper, .hooper-name {
+  margin-right: 45px;
+  margin-left: 45px;
 }
 
 .sticky {
