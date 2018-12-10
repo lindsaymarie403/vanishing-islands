@@ -157,6 +157,14 @@ body {
   color: #6d6e71;
 }
 
+.graphic-source {
+  font-family: Arial;
+  font-size: 12px;
+  width: 1000px;
+  margin: 15px auto 30px auto;
+  color: #6d6e71;
+}
+
 #sprys, #littleneck, #thomas, #longmarsh, #nelson, #roystons, #sharps, #greatcove, #fish, #piney {
   opacity: 0;
 }
