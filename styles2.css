@@ -22,7 +22,8 @@ body {
 }
 
 #intro {
-  width: 1000px;
+  width: 100%;
+  max-width: 1000px;
   margin: 75px auto 10px auto;
   position: relative;
 }
@@ -255,4 +256,35 @@ body {
 #footer {
   border-top: 1px solid #6d6e71;
   padding-top: 20px;
+}
+
+@media (max-width: 1020px) {
+  .islands, .island-names, .graphic-title, .graphic-sub, .graphic-source {
+    width: 600px;
+  }
+  .name {
+    width: 182px;
+  }
+  .islands img {
+    width: 180px;
+  }
+  #hooper, .hooper-name {
+    margin-right: 26px;
+    margin-left: 26px;
+  }
+  #sprys, #littleneck, #thomas, #longmarsh, #nelson, #roystons, #sharps, #greatcove, #fish, #piney {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 620px) {
+  .islands, .island-names, .graphic-title, .graphic-sub, .graphic-source {
+    width: 300px;
+  }
+  .name {
+    width: 82px;
+  }
+  .islands img {
+    width: 80px;
+  }
 }
