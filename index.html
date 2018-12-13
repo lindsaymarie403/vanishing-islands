@@ -507,17 +507,42 @@
           <div class="lost-names second">Henn Island</div>
           <div class="lost-names">Henrico Island</div>
           <div class="lost-names third">Henricus Island</div>
+          <div class="lost-names">Henry Condons Island</div>
+          <div class="lost-names">Henry Stump Island</div>
+          <div class="lost-names second">Herb Island</div>
+          <div class="lost-names">Hernre Island</div>
+          <div class="lost-names">Heron Island</div>
+          <div class="lost-names second">Herrig Island</div>
+          <div class="lost-names">Herring Island</div>
+          <div class="lost-names third">Hoags Island</div>
+          <div class="lost-names second">Hog Island</div>
+          <div class="lost-names">Hogg Island</div>
+          <div class="lost-names">Hoggs Island</div>
+          <div class="lost-names third">Hog Ruting Island</div>
+          <div class="lost-names">Honey Island</div>
+          <div class="lost-names">Honney Island</div>
+          <div class="lost-names">Holland Island</div>
+          <div class="lost-names">Hope Island</div>
+          <div class="lost-names">Hopkins Island</div>
+          <div class="lost-names second">Horney Point Island</div>
+          <div class="lost-names">Huckleberry Island</div>
+          <div class="lost-names">Hughes Island</div>
+          <div class="lost-names second">Imolys Island</div>
+          <div class="lost-names">Indian Island</div>
+          <div class="lost-names third">Inner Island</div>
         </div>
       </div>
-      <div class="annotations" id="first-intro">In 1848, Sharps Island, perched off the Maryland coast in the Chesapeake Bay, measured 438 acres.</div>
-      <div class="annotations" id="second-intro">It shrunk to 53 acres by 1910. And today, it’s gone.</div>
-      <div class="annotations" id="third-intro">Experts estimate hundreds like Sharps have eroded since the English explored the Chesapeake region in the 1600s.</div>
+      <div class="annotations" id="first-intro">In 1848, Sharps Island was perched off the Maryland coast in the Chesapeake Bay, measured 438 acres.</div>
+      <div class="annotations" id="second-intro">It measured 449 acres.</div>
+      <div class="annotations" id="third-intro">By 1942, it had shrunk to 17 acres.</div>
+      <div class="annotations" id="fourth-intro">And by the 1960s, it was gone.</div>
+      <div class="annotations" id="fifth-intro">Experts estimate hundreds like Sharps have eroded since the English explored the Chesapeake region in the 1600s.</div>
 
       <div id="dummy"></div>
 
     </div>
 
-    <div class="annotations" id="fourth-intro">And with climate change causing sea levels to rise faster than ever, more islands are in danger of vanishing.</div>
+    <div class="annotations" id="sixth-intro">And with climate change causing sea levels to rise faster than ever, more islands are in danger of vanishing.</div>
 
     <div id="container">
       <div class="body-copy">
@@ -822,7 +847,7 @@
       var viewportTop = $(window).scrollTop();
       var viewportBottom = viewportTop + $(window).height();
 
-      return elementBottom + 50 <= viewportBottom;
+      return elementBottom + 150 <= viewportBottom;
     };
 
     $.fn.isDone = function() {
@@ -856,15 +881,23 @@
 
     //redesigned scroll for intro
     $(window).on('resize scroll', function() {
-        if ($('#third-intro').readyForNext()) {
+      if ($('#fifth-intro').readyForNext()) {
         $('#head').css('opacity', '0')
         $('#lost-islands').css('opacity', '1')
         $('.sharps-name').css('opacity', '0')
+      } else if ($('#fourth-intro').readyForNext()) {
+        $('#head').css('opacity', '1').attr('src', 'assets/sharps-gone.png')
+        $('#lost-islands').css('opacity', '0')
+        $('.sharps-name').css('opacity', '1')
+      } else if ($('#third-intro').readyForNext()) {
+        $('#head').css('opacity', '1').attr('src', 'assets/sharps-small.png')
+        $('#lost-islands').css('opacity', '0')
+        $('.sharps-name').css('opacity', '1')
       } else if ($('#second-intro').readyForNext()) {
-      $('#head').css('opacity', '1').attr('src', 'assets/satellite.png')
-      $('#lost-islands').css('opacity', '0')
-      $('.sharps-name').css('opacity', '1')
-    } else {
+        $('#head').css('opacity', '1').attr('src', 'assets/sharps-big.png')
+        $('#lost-islands').css('opacity', '0')
+        $('.sharps-name').css('opacity', '1')
+      } else {
         $('#head').attr('src', 'assets/survey.jpg')
       }
     });
