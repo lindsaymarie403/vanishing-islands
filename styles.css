@@ -35,13 +35,15 @@ body {
   z-index: -1;
 }
 
-#head {
+.head {
   width: 100%;
   border-radius: 3px;
+  position: absolute;
 }
 
 #first-intro {
-  margin: -200px 25% 0px 25%;
+  margin: 0px 25% 0px 25%;
+  top: 100px;
 }
 
 #second-intro {
@@ -113,7 +115,7 @@ body {
 #container {
   position: absolute;
   z-index: 4;
-  top: 5100px;
+  top: 4750px;
   background-color: white;
   width: 100%;
   padding-top: 50px;
@@ -266,6 +268,10 @@ body {
 #footer {
   border-top: 1px solid #6d6e71;
   padding-top: 20px;
+}
+
+.g-pstyle3 {
+  font-weight: 500;
 }
 
 @media (max-width: 1020px) {
