@@ -131,9 +131,8 @@ body {
 #sub {
   font-family: Arial;
   font-size: 26px;
-  margin: 10px auto 30px auto;
-  padding-bottom: 30px;
-  border-bottom: 1px solid #d3d3d3;
+  margin: 10px auto 0px auto;
+  padding-bottom: 10px;
 }
 
 .copy {
@@ -143,13 +142,12 @@ body {
 }
 
 .section {
-  padding-top: 25px;
+  padding: 0px;
   font-family: Arial;
-  font-size: 17px;
-  letter-spacing: .1em;
-  font-weight: bold;
-  color: #6eb9ce;
+  font-size: 14px;
+  color: #474747;
   text-transform: uppercase;
+  font-weight: bold;
 }
 
 .graphic-title {
